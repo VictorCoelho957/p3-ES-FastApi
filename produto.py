@@ -26,3 +26,6 @@ def estoque_lotado(quantidade):
     limite_estoque = 100
     quantidade_total = sum(produto["quantidade"] for produto in estoque)
     return quantidade_total + quantidade > limite_estoque
+
+def listar_produtos():
+    return estoque

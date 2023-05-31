@@ -1,5 +1,5 @@
 import unittest
-from produto import adicionar_produto
+from produto import adicionar_produto, listar_produtos
 
 class TestAdicionarProduto(unittest.TestCase):
 
