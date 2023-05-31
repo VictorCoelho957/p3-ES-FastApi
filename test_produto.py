@@ -29,3 +29,15 @@ class TestAdicionarProduto(unittest.TestCase):
         self.assertEqual(len(resultado), 2)
         self.assertIn({"nome": self.produto_1, "tipo": self.tipo_1, "quantidade": 10}, resultado)
         self.assertIn({"nome": self.produto_2, "tipo": self.tipo_1, "quantidade": 5}, resultado)
+
+    def test_deletar_produto(self):
+        # Teste: Remover um produto do estoque
+        resultado_anterior = listar_produtos()
+        self.assertEqual(len(resultado_anterior), 2)
+
+        resultado = deletar_produto("Produto 1")
+        self.assertTrue(resultado)
+
+        resultado_atual = listar_produtos()
+        self.assertEqual(len(resultado_atual), 1)
+        self.assertNotIn({"nome": "Produto 1", "tipo": "Tipo 1", "quantidade": 10}, resultado_atual)
