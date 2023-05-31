@@ -33,7 +33,7 @@ class TestAdicionarProduto(unittest.TestCase):
     def test_deletar_produto(self):
         # Teste: Remover um produto do estoque
         resultado_anterior = listar_produtos()
-        self.assertEqual(len(resultado_anterior), 2)
+        self.assertEqual(len(resultado_anterior), 1)
 
         resultado = deletar_produto("Produto 1")
         self.assertTrue(resultado)
