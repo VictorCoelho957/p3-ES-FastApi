@@ -29,3 +29,10 @@ def estoque_lotado(quantidade):
 
 def listar_produtos():
     return estoque
+
+def deletar_produto(nome):
+    for produto in estoque:
+        if produto["nome"] == nome:
+            estoque.remove(produto)
+            return True
+    return False
