@@ -10,7 +10,7 @@
 
 
 # Competencias
--Test Driven Development (TDD)
+- Test Driven Development (TDD)
 
 # Tecnologias utilizadas
 
@@ -41,9 +41,9 @@ Pré-requisitos:
 
 
 # Autores
--Fernando Costa:
+- Fernando Costa:
 https://github.com/fercostard
 - Guilherme Aquino:
 https://github.com/guilhermeaquinop
--Victor Coelho:
+- Victor Coelho:
 https://github.com/VictorCoelho957
