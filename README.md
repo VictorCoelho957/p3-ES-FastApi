@@ -6,10 +6,10 @@
 
 
 
-#Casos de uso
+# Casos de uso
 
 
-#Competencias
+# Competencias
 -Test Driven Development (TDD)
 
 # Tecnologias utilizadas
