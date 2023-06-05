@@ -1,5 +1,5 @@
 import unittest
-from produto import adicionar_produto, listar_produtos, deletar_produto
+from produto import adicionar_produto, listar_produtos, deletar_produto, atualizar_produto, listar_produto_especifico
 
 class TestProduto(unittest.TestCase):
 
@@ -26,7 +26,7 @@ class TestProduto(unittest.TestCase):
     def test_listar_produtos(self):
         # Teste: Listar todos os produtos cadastrados
         resultado = listar_produtos()
-        self.assertEqual(len(resultado), 1)
+        self.assertEqual(len(resultado), 2)
         self.assertIn({"nome": self.produto_2, "tipo": self.tipo_1, "quantidade": 5}, resultado)
 
     def test_deletar_produto(self):
@@ -40,3 +40,29 @@ class TestProduto(unittest.TestCase):
         resultado_atual = listar_produtos()
         self.assertEqual(len(resultado_atual), 1)
         self.assertNotIn({"nome": "Produto 1", "tipo": "Tipo 1", "quantidade": 10}, resultado_atual)
+
+    def test_atualizar_produto(self):
+        # Teste: Atualizar informações de um produto no estoque
+        resultado_anterior = listar_produtos()
+        self.assertEqual(len(resultado_anterior), 2)
+
+        resultado = atualizar_produto("Produto 1", "Novo Produto", "Novo Tipo", 20)
+        self.assertTrue(resultado)
+
+        resultado_atual = listar_produtos()
+        self.assertEqual(len(resultado_atual), 2)
+        produto_atualizado = {"nome": "Novo Produto", "tipo": "Novo Tipo", "quantidade": 20}
+        self.assertIn(produto_atualizado, resultado_atual)
+
+    def test_listar_produto_especifico(self):
+        # Teste: Exibir informações de um produto específico
+        resultado = listar_produto_especifico("Produto 2")
+        self.assertIsNotNone(resultado)
+        self.assertEqual(resultado["nome"], "Produto 2")
+        self.assertEqual(resultado["tipo"], "Tipo 1")
+        self.assertEqual(resultado["quantidade"], 5)
+
+    def test_listar_produto_especifico_produto_nao_encontrado(self):
+        # Teste: Tentar exibir informações de um produto que não existe no estoque
+        resultado = listar_produto_especifico("Produto 3")
+        self.assertIsNone(resultado)
