@@ -45,3 +45,9 @@ def atualizar_produto(nome, novo_nome, novo_tipo, nova_quantidade):
             produto["quantidade"] = nova_quantidade
             return True
     return False
+
+def listar_produto_especifico(nome):
+    for produto in estoque:
+        if produto["nome"] == nome:
+            return produto
+    return None
