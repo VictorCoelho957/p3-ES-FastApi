@@ -11,9 +11,13 @@
 ----Adicionar Produto----
 
 Caso de Uso: Adicionar Produto
+
 Objetivo: Adicionar um novo produto ao estoque
+
 Atores: Estoquista
+
 Pré-Condição: Ao menos um produtos está cadastrado no estoque
+
 Pós-Condição: Produto cadastrado
 
 Fluxo Principal de Eventos:
@@ -26,6 +30,7 @@ Fluxo Alternativos:
 - Bloqueio Estoque Lotado: Se o estoque estiver cheio. O sistema emite uma mensagem informando que o estoque está cheio e a ação não pode ser realizada.
 
 Cenário Principal: Inserção de um novo produto.
+
 Cenário Secundário: Bloqueio, Bloqueio Estoque Lotado
 
 
