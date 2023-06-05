@@ -36,3 +36,12 @@ def deletar_produto(nome):
             estoque.remove(produto)
             return True
     return False
+
+def atualizar_produto(nome, novo_nome, novo_tipo, nova_quantidade):
+    for produto in estoque:
+        if produto["nome"] == nome:
+            produto["nome"] = novo_nome
+            produto["tipo"] = novo_tipo
+            produto["quantidade"] = nova_quantidade
+            return True
+    return False
