@@ -8,7 +8,7 @@ Este projeto foi desenvolvido com o objetivo de criar  CRUD usando a linguagem d
 
 # Casos de uso
 
-------Adicionar Produto------
+### ------Adicionar Produto------
 
 Caso de Uso: Adicionar Produto
 
@@ -35,7 +35,7 @@ Cenário Secundário: Bloqueio, Bloqueio Estoque Lotado
 
 
 
-------Listar Produtos------ 
+### ------Listar Produtos------ 
 
 Caso de Uso: Listar Produtos
 
@@ -62,7 +62,7 @@ Cenário Secundário: Lista Vazia,Erro de Conexão.
 
 
 
-------Deletar Produtos------ 
+### ------Deletar Produtos------ 
 
 Caso de Uso: Deletar Produtos
 
@@ -92,7 +92,7 @@ Cenário Secundário: Bloqueio,Produto não encontrado.
 
 
 
-------Atualizar Produto------
+### ------Atualizar Produto------
 
 Caso de Uso: Atualizar Produto
 
@@ -125,7 +125,7 @@ Cenário Secundário: Bloqueio, Produto não encontrado.
 
 
 
-------Listar 1 Produto------
+### ------Listar 1 Produto------
 
 Caso de Uso: Listar 1 Produto
 
