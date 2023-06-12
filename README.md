@@ -159,7 +159,8 @@ Cenário Secundário: Bloqueio Lista Vazia, Produto não encontrado.
 
 ## Back end
 - Python
-
+##Banco de dados
+-MySQL
 
 # Autores
 - Fernando Costa:
